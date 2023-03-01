@@ -17,9 +17,9 @@ public class HW5Driver {
             }
         }
         return indexHolder;
-    }
+    }//end of method
 
-    // Creates and returns a list of MyPoint objects
+    // Creates and returns an ArrayList of MyPoint objects at random coordinates between -20 to 20
     private static ArrayList<MyPoint> createPointList() {
         ArrayList<MyPoint> list = new ArrayList<>();
         int count = 10;
@@ -32,10 +32,10 @@ public class HW5Driver {
             list.add(new MyPoint(x, y));
         }
         return list;
-    }
+    }//end of method
 
     public static void main(String[] args) {
-        // create two Point objects
+        // create two MyPoint objects
         MyPoint p1 = new MyPoint();
         p1.setX(5);
         p1.setY(10);
@@ -53,10 +53,11 @@ public class HW5Driver {
         // result should be: 8.246211…
 
         ArrayList <MyPoint> arrayListerArraylist= createPointList();;
-        //Code below displays all Point objects in the list in coordinate value
+        //Code below displays MyPoint objects in the ArrayList in coordinate value form (if uncommented)
         /*for (MyPoint location:arrayListerArraylist){
             System.out.println(location);
         }*/
+
         System.out.println();
         System.out.println("The point closest to (0, 0) is: (" +arrayListerArraylist.get(findClosestToOrigin(arrayListerArraylist))+")");
         System.out.println();
@@ -64,8 +65,9 @@ public class HW5Driver {
         //create two Shape Objects with MyPoint objects values plus color
         Shape s1 = new Shape(p1, "Blue");
         Shape s2= new Shape(p2, "Red");
-        System.out.println("S1 "+s1);
-        System.out.println("S2 "+s2);
+        // should print X and Y values of p1 and p2 onto s1 and s2 respectively
+        System.out.println("s1 "+s1);
+        System.out.println("s2 "+s2);
 
         System.out.println("Distance between s1 and s2 = "+s1.distanceBetweenCenters(s2));
         // result should be: 8.246211…
