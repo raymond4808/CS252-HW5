@@ -1,21 +1,20 @@
-public class Shape extends MyPoint{
-    private MyPoint center; //= new MyPoint ();
+public class Shape{
+    private MyPoint center;
     private String color;
 
     public Shape (){}
 
     public Shape (MyPoint obj, String c){
-        center = obj;
+        center = obj; //MyPoint Object attribute
         color= c;
     }
 
+    //method that demands two different Shape.(attribute), call a method that takes two objects attributes and finds distance between them
     public double distanceBetweenCenters (Shape other){
-        double distance = this.center.distanceBetween(other);
-        return distance;
+        return this.center.distanceBetween(other.center);
     }
 
     public String toString(){
-        String centerReturn = "Center: (x="+center.getX()+",y="+ center.getY()+ "); Color: "+ this.color;;
-        return centerReturn;
+        return "Center: (x="+center.getX()+",y="+ center.getY()+ "); Color: "+ this.color;
     }
 }
