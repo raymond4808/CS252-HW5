@@ -1,11 +1,12 @@
 public class MyPoint {
     private int x;
     private int y;
-    public MyPoint (){}//end of method
+
+    public MyPoint (){}//end of constructor
     public MyPoint (int xValue, int yValue){
         this.x= xValue;
         this.y= yValue;
-    }//end of method
+    }//end of constructor
     public void setX (int xValue){
         this.x=xValue;
     }//end of method
