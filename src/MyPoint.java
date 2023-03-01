@@ -22,7 +22,6 @@ public class MyPoint {
         return this.y;
     }
 
-
     public double distanceBetween (MyPoint other){
         return Math.sqrt((Math.pow((other.getX()-this.getX()),2)+Math.pow((other.getY()-this.getY()),2)));
     }

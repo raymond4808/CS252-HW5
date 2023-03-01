@@ -9,10 +9,8 @@ public class Shape extends MyPoint{
         color= c;
     }
 
-
-
     public double distanceBetweenCenters (Shape other){
-        double distance = center.distanceBetween(other);
+        double distance = this.center.distanceBetween(other);
         return distance;
     }
 

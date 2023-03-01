@@ -50,7 +50,7 @@ public class HW5Driver {
 
         System.out.println("S1 "+s1);
         System.out.println("S2 "+s2);
-        System.out.println("Distance between s1 and s2 ="+s1.distanceBetweenCenters(s2));
+        System.out.println("Distance between s1 and s2 = "+s1.distanceBetweenCenters(s2));
     } // end main distanceBetweenCenters
         //Question 3 of the page
 }
