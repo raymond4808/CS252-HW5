@@ -33,16 +33,24 @@ public class HW5Driver {
         System.out.println("p2 is " + p2);
         // should print: p2 is (x=3,y=2)
 
-        System.out.println("Distance between p1 and p2: " + p1.distanceBetween(p2) );
+        System.out.println("Distance between p1 and p2: " + p1.distanceBetween(p2));
         // result should be: 8.246211…
 
-        ArrayList <MyPoint> P1Arraylist = p1.createPointList();
+        MyPoint arrayLister = new MyPoint (0,0);
+        ArrayList <MyPoint> arrayListerArraylist = arrayLister.createPointList();
         //Code below displays all Point objects in the list in coordinate value
         /*for (MyPoint location:P1Arraylist){
             System.out.println(location);
         }*/
+        System.out.println("The point closest to (0, 0) is: (" +arrayListerArraylist.get(findClosestToOrigin(arrayListerArraylist))+")");
+        System.out.println();
 
-        System.out.println("The point closest to (0, 0) is: (" +P1Arraylist.get(findClosestToOrigin(P1Arraylist))+")");
-    } // end main
+        Shape s1 = new Shape(p1, "Blue");
+        Shape s2= new Shape(p2, "Red");
+
+        System.out.println("S1 "+s1);
+        System.out.println("S2 "+s2);
+        System.out.println("Distance between s1 and s2 ="+s1.distanceBetweenCenters(s2));
+    } // end main distanceBetweenCenters
         //Question 3 of the page
 }

@@ -2,32 +2,32 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MyPoint {
-    private static int x;
-    private static int y;
+    private int x;
+    private int y;
     public MyPoint (){}
     public MyPoint (int xValue, int yValue){
         this.x= xValue;
         this.y= yValue;
     }
-    public static void setX (int xValue){
-        x=xValue;
+    public void setX (int xValue){
+        this.x=xValue;
     }
-    public static void setY (int yValue){
-        y=yValue;
+    public void setY (int yValue){
+        this.y=yValue;
     }
-    public static int getX(){
-        return x;
+    public int getX(){
+        return this.x;
     }
-    public static int getY(){
-        return y;
+    public int getY(){
+        return this.y;
     }
 
 
-    public static double distanceBetween (MyPoint other){
-        return Math.sqrt(Math.pow((other.getX()- getX()),2)+Math.pow((other.getY()-getY()),2));
+    public double distanceBetween (MyPoint other){
+        return Math.sqrt((Math.pow((other.getX()-this.getX()),2)+Math.pow((other.getY()-this.getY()),2)));
     }
     public String toString(){
-        String returnString ="x="+this.x+",y="+y;
+        String returnString ="x="+this.x+",y="+this.y;
         return returnString;
     }
 

@@ -5,18 +5,19 @@ public class Shape extends MyPoint{
     public Shape (){}
 
     public Shape (MyPoint obj, String c){
-        this.center = obj;
-        this.color= c;
+        center = obj;
+        color= c;
     }
 
+
+
     public double distanceBetweenCenters (Shape other){
-        double distance = Shape.distanceBetween(other);
+        double distance = center.distanceBetween(other);
         return distance;
     }
 
     public String toString(){
-        String centerReturn;
-        centerReturn = "Center: (x="+Shape.getX()+",y="+ Shape.getY()+ "); Color:"+ this.color;
+        String centerReturn = "Center: (x="+center.getX()+",y="+ center.getY()+ "); Color: "+ this.color;;
         return centerReturn;
     }
 }
